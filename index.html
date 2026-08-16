@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Private Profile</title>
+</head>
+
+<body>
+
+<div id="login">
+    <h1>🔐 Private Profile</h1>
+    <p>This profile is private.</p>
+
+    <input type="password" id="password" placeholder="Enter password">
+    <button onclick="checkPassword()">Open Profile</button>
+
+    <p id="error"></p>
+</div>
+
+<div id="profile" style="display:none;">
+
+    <h1>Dr. Rakesh</h1>
+
+    <h2>About</h2>
+    <p>A professional heart surgeon and doctor.</p>
+
+    <h2>Professional Information</h2>
+    <p><b>Profession:</b> Doctor</p>
+    <p><b>Specialization:</b> Heart Surgery</p>
+    <p><b>Workplace:</b> AIIMS Rishikesh</p>
+
+    <h2>Location</h2>
+    <p><b>Home:</b> Gandhinagar, Gujarat</p>
+
+    <h2>Contact</h2>
+    <p><b>Mobile:</b> 9754xxxxxx</p>
+
+</div>
+
+<script>
+function checkPassword() {
+
+    const password = document.getElementById("password").value;
+
+    const correctPassword = "1234";
+
+    if (password === correctPassword) {
+
+        document.getElementById("login").style.display = "none";
+        document.getElementById("profile").style.display = "block";
+
+    } else {
+
+        document.getElementById("error").innerText =
+        "Incorrect password. Try again.";
+
+    }
+}
+</script>
+
+</body>
+</html>
